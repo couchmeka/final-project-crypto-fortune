@@ -125,6 +125,7 @@ cryptoButton.addEventListener('click', () => {
 sound.play();
   const table = document.querySelector('.table');
 
+  
 //open and hide table display
   if (table.style.display === '') 
   {
@@ -175,9 +176,23 @@ sound.play();
             name.innerHTML = item.name;
             currentPrice.innerHTML = `$ ${item.current_price}`;
 
-      //row click to copy 
+      //row click to copy crypto name for easy search reference https://stackoverflow.com/questions/69438702/why-does-navigator-clipboard-writetext-not-copy-text-to-clipboard-if-it-is-pro
      
-          
+      row.addEventListener('click', () => {
+
+        navigator.clipboard
+          .writeText(item.name)
+          .then(() => {
+            alert(`successfully copied ${item.name}`);
+          })
+          .catch(() => {
+            alert("something went wrong");
+          });
+        
+      })    
+
+
+
 
       //add logo to table   
             image.innerHTML='';
