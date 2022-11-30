@@ -37,7 +37,7 @@ cardIMG.src = 'cookieopen.png';
 
 
 //Audio for cookie crunch
-let sound = new Audio("crunch.mp3"); // buffers automatically when created
+let sound = new Audio('crunch.mp3'); // buffers automatically when created
 sound.play();
 
 
@@ -83,8 +83,8 @@ let tickerRequestFortune = async () => {
 
     //add image and resize
     cryptoImg.src = cryptoType.image;
-    cryptoImg.style.width = "50px";
-    cryptoImg.style.height = "50px";
+    cryptoImg.style.width = '50px';
+    cryptoImg.style.height = '50px';
 
     // inner text for crypto fortune
     cryptoPrice.innerText =`Current Price: ${cryptoType.current_price}`;
@@ -104,13 +104,13 @@ list.appendChild(cryptoImg);
 
 
 //paragraph styles and append for Fortune
-fortune.classList = "card-img-overlay card-text text-stroke text-black";
-fortune.style.textAlign="center";
-fortune.style.display = "flex";
-fortune.style.justifyContent = "center";
-fortune.style.alignItems = "center";
-fortune.style.maxWidth = "250px";
-fortune.style.fontWeight ="bold"
+fortune.classList = 'card-img-overlay card-text text-stroke text-black';
+fortune.style.textAlign='center';
+fortune.style.display = 'flex';
+fortune.style.justifyContent = 'center';
+fortune.style.alignItems = 'center';
+fortune.style.maxWidth = '250px';
+fortune.style.fontWeight ='bold'
 cardDiv.appendChild(fortune);
 
 
@@ -120,9 +120,9 @@ cardDiv.appendChild(fortune);
 
 //button to create table
 cryptoButton.addEventListener('click', () => {
-  let sound = new Audio("click.mp3"); // buffers automatically when created
+  let sound = new Audio('click.mp3'); // buffers automatically when created
 sound.play();
-  const table = document.querySelector(".table");
+  const table = document.querySelector('.table');
 
 //open and hide table display
   if (table.style.display === '') 
@@ -147,7 +147,7 @@ sound.play();
   
       //create table function
       function loadTableData() {
-          const table = document.querySelector(".table");
+          const table = document.querySelector('.table');
 
        //looping through items in data array for table population
           data1.forEach( item => {
@@ -162,24 +162,24 @@ sound.play();
       
       //adding data to table rows
             high24.innerHTML = item.high_24h;
-            high24.style.color="lightgreen"
+            high24.style.color='lightgreen';
 
             low24.innerHTML = item.low_24h;
-            low24.style.color ="red"
+            low24.style.color ='red';
 
             volume.innerHTML =item.total_volume;
-
             symbol.innerHTML = item.symbol.toUpperCase();
-
             name.innerHTML = item.name;
-
             currentPrice.innerHTML = `$ ${item.current_price}`;
 
+      //row click to copy 
+          
+
       //add logo to table   
-            image.innerHTML="";
+            image.innerHTML='';
             let img = document.createElement('img');
             img.src = item.image;
-            img.style.height = "50px";
+            img.style.height = '50px';
             image.appendChild(img);
             
           });
@@ -207,6 +207,8 @@ cookieButton.addEventListener('click', () => {
     location.reload();
 
 })
+
+
 
 
 
