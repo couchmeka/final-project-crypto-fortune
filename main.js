@@ -158,6 +158,7 @@ sound.play();
             let high24 = row.insertCell(4);
             let low24 = row.insertCell(5);
             let volume = row.insertCell(6);
+          
       
       //adding data to table rows
             high24.innerHTML = item.high_24h;
@@ -168,7 +169,7 @@ sound.play();
 
             volume.innerHTML =item.total_volume;
 
-            symbol.innerHTML = item.symbol;
+            symbol.innerHTML =  item.symbol.toUpperCase();
 
             name.innerHTML = item.name;
 
