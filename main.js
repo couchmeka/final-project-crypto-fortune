@@ -168,7 +168,7 @@ cryptoButton.addEventListener('click', () => {
             volume.innerHTML =item.total_volume;
             symbol.innerHTML = item.symbol;
             name.innerHTML = item.name;
-            currentPrice.innerHTML = item.current_price;
+            currentPrice.innerHTML = `$ ${item.current_price}`;
 
       //add logo to table   
             image.innerHTML="";
