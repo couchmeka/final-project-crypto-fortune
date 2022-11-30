@@ -20,12 +20,12 @@ let cryptoImg = document.createElement('img');
 cardIMG.src = 'fortuneclosed.png';
 
 
-// quotes https://zenquotes.io/api/quotes/
+// quotes https://type.fit/api/quotes
 // blockchain https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd
 
 
 
-//Event Listener
+//Event Listener for fortune cookie open
 fortuneCookie.addEventListener('click', () => {
     
     
@@ -58,7 +58,6 @@ let quoteRequest = async () => {
     }
     
     let textToSpeak = `${fortune.innerText}`;
-    
     let speakData = new SpeechSynthesisUtterance();
     speakData.volume = 1; // 0 to 1
     speakData.rate = .8; // 0.1 to 10
@@ -118,12 +117,10 @@ cardDiv.appendChild(fortune);
 })
 
 
-
-
-
 //button to create table
 cryptoButton.addEventListener('click', () => {
-  
+  let sound = new Audio("click.mp3"); // buffers automatically when created
+sound.play();
   const table = document.querySelector(".table");
 
 //open and hide table display
@@ -204,6 +201,7 @@ cryptoButton.addEventListener('click', () => {
 
 //button to reset the page
 cookieButton.addEventListener('click', () => {
+
 
     location.reload();
 
