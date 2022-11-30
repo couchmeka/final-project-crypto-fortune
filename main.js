@@ -46,7 +46,7 @@ let quoteRequest = async () => {
     let data = await response.json();
     fortune.innerText = data[Math.ceil(Math.random() * 1500)].text;
     
- //Voice Functionality   
+ //Voice Functionality (found online) 
     function getVoices() {
       let voices = speechSynthesis.getVoices();
       if(!voices.length){
@@ -60,9 +60,9 @@ let quoteRequest = async () => {
     let textToSpeak = `${fortune.innerText}`;
     
     let speakData = new SpeechSynthesisUtterance();
-    speakData.volume = 1; // From 0 to 1
-    speakData.rate = .8; // From 0.1 to 10
-    speakData.pitch = 1; // From 0 to 2
+    speakData.volume = 1; // 0 to 1
+    speakData.rate = .8; // 0.1 to 10
+    speakData.pitch = 1; // 0 to 2
     speakData.text = textToSpeak;
     speakData.lang = 'en';
     speakData.voice = getVoices()[0];
@@ -174,7 +174,7 @@ cryptoButton.addEventListener('click', () => {
             symbol.innerHTML = item.symbol;
 
             name.innerHTML = item.name;
-            
+
             currentPrice.innerHTML = `$ ${item.current_price}`;
 
       //add logo to table   
