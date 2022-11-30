@@ -48,7 +48,7 @@ let quoteRequest = async () => {
     fortune.innerText = data[Math.ceil(Math.random() * 1500)].text;
     
  //Voice Functionality (found online) Web Speech Api https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
- 
+
     function getVoices() {
       let voices = speechSynthesis.getVoices();
       if(!voices.length){
@@ -176,11 +176,8 @@ sound.play();
             currentPrice.innerHTML = `$ ${item.current_price}`;
 
       //row click to copy 
-          row.addEventListener('click', () => {
-            
-            console.log('click');
-
-          })
+     
+          
 
       //add logo to table   
             image.innerHTML='';
