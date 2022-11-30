@@ -1,5 +1,5 @@
 
-
+/* table hoover effects */
 table tr:hover td {
   background: #3d3b3b;
   cursor: pointer;
