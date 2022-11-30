@@ -1,0 +1,222 @@
+/* header for table */
+.header{
+    position:sticky;
+    top: 0 ;
+  }
+
+  
+  /* upper navigation bar */
+  .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  }
+  
+  
+  /* search bar lining */
+  #lineMe {
+    display: block;
+    float: right;
+    height: 40px;
+    width: 100px;
+    
+  }
+  
+  #lineMeToo{
+  
+    display: block;
+    float: right;
+    height: 40px;
+    width: 200px;
+  }
+  
+  
+  /* scroll bars */
+  .scroll {
+    max-height: 400px;
+    overflow-y: auto;
+    
+  }
+  
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: crimson;
+    -webkit-box-shadow: inset 0 0 6px rgba(177, 11, 11, 0.3); 
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(6, 6, 2, 0.5); 
+  }
+  
+  
+  
+ 
+  
+  /* Card Features  */
+  #fortuneApp {
+  
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 5px 10px #888888;
+
+
+}
+  
+  /* search  sizing and locations */
+  #searchForm {
+  
+    position: relative;
+          top: 50%;
+          left: 20%;
+          width: 100px;
+          height: 100px;
+  }
+  
+  /* body background image and color */
+  body {
+  
+      background-color: crimson;
+    background-image: url("https://cdn.pixabay.com/photo/2018/05/16/18/17/bitcoin-3406638_1280.jpg");
+    background-size: cover;
+    
+  }
+  
+  /* centering paragraph data over cookie */
+  p{
+  margin-left: auto;
+  margin-right: auto;
+  
+  }
+  
+  /* sticky table head */
+  thead th { 
+    position: sticky; top: 0; z-index: 1; 
+  }
+
+  
+  /* header animation configurations */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-primary: #f6dea2;
+    --color-secondary: #f1f490;
+    --color-tertiary: #f28b7d;
+    --color-quaternary: #f07a6a;
+    --color-quinary: #ee6352;
+    
+    /* --color-primary: #5192ED;
+    --color-secondary: #69A1F0;
+    --color-tertiary: #7EAEF2;
+    --color-quaternary: #90BAF5;
+    --color-quinary: #A2C4F5;
+     */
+  }
+  
+  
+  .content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .text_shadows {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    font-family: bungee, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    color: var(--color-primary);
+
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+  }
+  
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    20% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    30% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    40% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    50% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    60% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    70% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    80% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    90% {
+      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    40% {
+      transform: translate(-12px, -12px);
+    }
+    50% {
+      transform: translate(-12px, -12px);
+    }
+    60% {
+      transform: translate(-12px, -12px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+   
+    .card {
+
+      width: 5px;
+    }
+  }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+
+  <!-- Bootstrap Tag -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div>
+      <nav class="navbar sticky-top bg-dark">
+          <span class=""></span>
+        
+
+    <!-- Search Form(google search) -->
+        <form action="https://www.google.com/search" class="form-inline searchform my-2 my-lg-0"method="get" name="searchform" target="_blank">
+          <input id="lineMeToo" autocomplete="on" class="form-control search" name="q" placeholder="Search Crypto" required="required"  type="text">
+          <button id="lineMe" class="btn btn-danger my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+  
+  
+    <!-- Begining of Fortune App Card -->
+  <div id = "fortuneApp">
+      <div class="card bg-dark text-white" style="width: 50rem;">
+         <div class="content card-header text-center display-4">
+          <h5 class="text_shadows">Crypto Fortune</h5>
+        </div>
+    <!-- Fortune cookie image -->
+          <img class="card-img" src="" alt="Card image" style="width: 50rem;">
+      </div>
+
+
+    <!--Item for Crypto Fortune  -->
+          
+          <div class="card" style="width: 50rem;">
+            <ul class="list-group list-group-flush">
+      
+            </ul>
+          </div>
+  
+  
+    <!-- Buttons Card -->
+          <div class="card" style="width: 50rem;">
+            <button id ="newCookie" type="button" class="btn btn-danger">New Cookie</button>
+            <button id= "getFortune" type="button" class="btn btn-warning">Get Fortune</button>
+            <button id= "getCrypto" type="button" class="btn btn-dark">Get Crypto List</button>
+          </div>
+  
+    <!--  Table Card -->
+          <div class ="center card scroll"style="width: 50rem;">
+            <table class="table table-hover table-dark table-striped mb-0">
+                <thead class="header">
+                    <th scope="col">Crypto Name</th>
+                    <th scope="col">Current Price</th>
+                    <th scope="col">Brand Logo</th>
+                    <th scope="col">Symbol</th> 
+                    <th scope="col"><i class="fas fa-caret-up"></i>High 24</th> 
+                    <th scope="col"><i class="fa-solid fa-caret-down"></i>Low 24</th>
+                    <th scope="col">Volume</th>      
+                </thead>
+                <tbody>
+            
+               </tbody>
+            </table>
+        </div>
+  </div>
+  
+ 
+    
+  <!-- scripts -->
+        <script src="https://kit.fontawesome.com/267ca0a163.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+      <script src="main.js"></script>
+  </body>
+  </html>
