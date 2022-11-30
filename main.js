@@ -1,4 +1,5 @@
 //query selectors 
+
 let fortuneCookie = document.querySelector('#getFortune');
 let cookieButton = document.querySelector('#newCookie');
 let cryptoButton = document.querySelector('#getCrypto');
@@ -48,23 +49,23 @@ let quoteRequest = async () => {
     
  //Voice Functionality (found online) 
     function getVoices() {
-      let voice = speechSynthesis.getVoices();
-      if(!voice.length){
+      let voices = speechSynthesis.getVoices();
+      if(!voices.length){
         let utterance = new SpeechSynthesisUtterance("");
         speechSynthesis.speak(utterance);
-        voice = speechSynthesis.getVoices();
+        voices = speechSynthesis.getVoices();
       }
-      return voice;
+      return voices;
     }
     
-    let textToSpeech = `${fortune.innerText}`;
-    let speechData = new SpeechSynthesisUtterance();
-    speechData.volume = 1; // 0 to 1
-    speechData.rate = .8; // 0.1 to 10
-    speechData.pitch = 1; // 0 to 2
-    speechData.text = textToSpeech;
-    speechData.lang = 'en';
-    speechData.voice = getVoices()[0];
+    let textToSpeak = `${fortune.innerText}`;
+    let speakData = new SpeechSynthesisUtterance();
+    speakData.volume = 1; // 0 to 1
+    speakData.rate = .8; // 0.1 to 10
+    speakData.pitch = 1; // 0 to 2
+    speakData.text = textToSpeak;
+    speakData.lang = 'en';
+    speakData.voice = getVoices()[0];
     
     speechSynthesis.speak(speakData);
 
@@ -158,7 +159,6 @@ sound.play();
             let high24 = row.insertCell(4);
             let low24 = row.insertCell(5);
             let volume = row.insertCell(6);
-          
       
       //adding data to table rows
             high24.innerHTML = item.high_24h;
@@ -169,7 +169,7 @@ sound.play();
 
             volume.innerHTML =item.total_volume;
 
-            symbol.innerHTML =  item.symbol.toUpperCase();
+            symbol.innerHTML = item.symbol.toUpperCase();
 
             name.innerHTML = item.name;
 
