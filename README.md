@@ -1,6 +1,7 @@
 # Crypto Fortune App
 This Web Application give you an inspirational quote in the form of a fortune cookie fortune and generates a random lucky cryptocurrency token. It also uses text to speech to read the fortune for those who have a hard time seeing. This is meant to be for fun and is not meant to be financial advise. 
 
+<img width="879" alt="Screenshot 2022-11-30 at 12 04 13 PM" src="https://user-images.githubusercontent.com/21232416/204861855-1ec0d464-9e70-4e48-abe7-78df6daea6e6.png">
 
 ## Info
 This application uses Coin Gecko API https://www.coingecko.com/en/api/documentation
