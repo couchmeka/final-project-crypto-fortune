@@ -147,10 +147,10 @@ sound.play();
   
       //create table function
       function loadTableData() {
-          const table = document.querySelector('.table');
+          let table = document.querySelector('.table');
 
        //looping through items in data array for table population
-          data1.forEach( item => {
+          data1.forEach(item => {
             let row = table.insertRow();
             let name = row.insertCell(0);
             let currentPrice = row.insertCell(1);
@@ -185,7 +185,7 @@ sound.play();
           });
         }
   
-    //call function 
+    //call function load table data
     loadTableData();
      
   
