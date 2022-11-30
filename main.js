@@ -46,6 +46,7 @@ let quoteRequest = async () => {
     let data = await response.json();
     fortune.innerText = data[Math.ceil(Math.random() * 1500)].text;
     
+ //Voice Functionality   
     function getVoices() {
       let voices = speechSynthesis.getVoices();
       if(!voices.length){
@@ -109,6 +110,7 @@ fortune.style.display = "flex";
 fortune.style.justifyContent = "center";
 fortune.style.alignItems = "center";
 fortune.style.maxWidth = "250px";
+fortune.style.fontWeight ="bold"
 cardDiv.appendChild(fortune);
 
 
