@@ -46,6 +46,27 @@ let quoteRequest = async () => {
     let data = await response.json();
     fortune.innerText = data[Math.ceil(Math.random() * 1500)].text;
     
+    function getVoices() {
+      let voices = speechSynthesis.getVoices();
+      if(!voices.length){
+        let utterance = new SpeechSynthesisUtterance("");
+        speechSynthesis.speak(utterance);
+        voices = speechSynthesis.getVoices();
+      }
+      return voices;
+    }
+    
+    let textToSpeak = `${fortune.innerText}`;
+    
+    let speakData = new SpeechSynthesisUtterance();
+    speakData.volume = 1; // From 0 to 1
+    speakData.rate = .8; // From 0.1 to 10
+    speakData.pitch = 1; // From 0 to 2
+    speakData.text = textToSpeak;
+    speakData.lang = 'en';
+    speakData.voice = getVoices()[0];
+    
+    speechSynthesis.speak(speakData);
 
         }
 
@@ -81,7 +102,7 @@ list.appendChild(cryptoImg);
 
 
 
-//paragraph styles
+//paragraph styles and append for Fortune
 fortune.classList = "card-img-overlay card-text text-stroke text-black";
 fortune.style.textAlign="center";
 fortune.style.display = "flex";
