@@ -48,23 +48,23 @@ let quoteRequest = async () => {
     
  //Voice Functionality (found online) 
     function getVoices() {
-      let voices = speechSynthesis.getVoices();
-      if(!voices.length){
+      let voice = speechSynthesis.getVoices();
+      if(!voice.length){
         let utterance = new SpeechSynthesisUtterance("");
         speechSynthesis.speak(utterance);
-        voices = speechSynthesis.getVoices();
+        voice = speechSynthesis.getVoices();
       }
-      return voices;
+      return voice;
     }
     
-    let textToSpeak = `${fortune.innerText}`;
-    let speakData = new SpeechSynthesisUtterance();
-    speakData.volume = 1; // 0 to 1
-    speakData.rate = .8; // 0.1 to 10
-    speakData.pitch = 1; // 0 to 2
-    speakData.text = textToSpeak;
-    speakData.lang = 'en';
-    speakData.voice = getVoices()[0];
+    let textToSpeech = `${fortune.innerText}`;
+    let speechData = new SpeechSynthesisUtterance();
+    speechData.volume = 1; // 0 to 1
+    speechData.rate = .8; // 0.1 to 10
+    speechData.pitch = 1; // 0 to 2
+    speechData.text = textToSpeech;
+    speechData.lang = 'en';
+    speechData.voice = getVoices()[0];
     
     speechSynthesis.speak(speakData);
 
