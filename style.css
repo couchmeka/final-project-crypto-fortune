@@ -4,6 +4,16 @@
     top: 0 ;
   }
 
+   /* carrot colors */
+   .fa-caret-up{
+
+    color:chartreuse;
+  }
+
+  .fa-caret-down {
+
+    color:red;
+  }
   
   /* upper navigation bar */
   .navbar {
@@ -78,7 +88,7 @@
   /* body background image and color */
   body {
   
-      background-color: crimson;
+    background-color: crimson;
     background-image: url("https://cdn.pixabay.com/photo/2018/05/16/18/17/bitcoin-3406638_1280.jpg");
     background-size: cover;
     
@@ -255,13 +265,4 @@
    
   }
 
-  /* carrot colors */
-  .fa-caret-up{
-
-    color:chartreuse;
-  }
-
-  .fa-caret-down {
-
-    color:red;
-  }
+ 
