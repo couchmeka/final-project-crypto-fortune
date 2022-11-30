@@ -81,7 +81,7 @@ let tickerRequestFortune = async () => {
     console.log(data1[Math.ceil(Math.random() * 100)].name);
     let cryptoType = data1[Math.ceil(Math.random() * 100)];
 
-    //add image
+    //add image and resize
     cryptoImg.src = cryptoType.image;
     cryptoImg.style.width = "50px";
     cryptoImg.style.height = "50px";
@@ -164,10 +164,17 @@ cryptoButton.addEventListener('click', () => {
       
       //adding data to table rows
             high24.innerHTML = item.high_24h;
+            high24.style.color="lightgreen"
+
             low24.innerHTML = item.low_24h;
+            low24.style.color ="red"
+
             volume.innerHTML =item.total_volume;
+
             symbol.innerHTML = item.symbol;
+
             name.innerHTML = item.name;
+            
             currentPrice.innerHTML = `$ ${item.current_price}`;
 
       //add logo to table   
