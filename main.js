@@ -47,7 +47,8 @@ let quoteRequest = async () => {
     let data = await response.json();
     fortune.innerText = data[Math.ceil(Math.random() * 1500)].text;
     
- //Voice Functionality (found online) 
+ //Voice Functionality (found online) Web Speech Api https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
+ 
     function getVoices() {
       let voices = speechSynthesis.getVoices();
       if(!voices.length){
@@ -62,7 +63,7 @@ let quoteRequest = async () => {
     let speakData = new SpeechSynthesisUtterance();
     speakData.volume = 1; // 0 to 1
     speakData.rate = .8; // 0.1 to 10
-    speakData.pitch = 1; // 0 to 2
+    speakData.pitch = 1.2; // 0 to 2
     speakData.text = textToSpeak;
     speakData.lang = 'en';
     speakData.voice = getVoices()[0];
@@ -110,7 +111,7 @@ fortune.style.display = 'flex';
 fortune.style.justifyContent = 'center';
 fortune.style.alignItems = 'center';
 fortune.style.maxWidth = '250px';
-fortune.style.fontWeight ='bold'
+fortune.style.fontWeight ='bold';
 cardDiv.appendChild(fortune);
 
 
@@ -159,6 +160,8 @@ sound.play();
             let high24 = row.insertCell(4);
             let low24 = row.insertCell(5);
             let volume = row.insertCell(6);
+
+          
       
       //adding data to table rows
             high24.innerHTML = item.high_24h;
@@ -173,7 +176,11 @@ sound.play();
             currentPrice.innerHTML = `$ ${item.current_price}`;
 
       //row click to copy 
-          
+          row.addEventListener('click', () => {
+            
+            console.log('click');
+
+          })
 
       //add logo to table   
             image.innerHTML='';

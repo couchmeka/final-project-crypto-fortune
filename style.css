@@ -233,14 +233,14 @@ table tr:hover td {
 
     .card-header {
 
-     visibility: hidden;
+      visibility: hidden; 
 
     }
    
     .card { 
 
     max-width: 300px !important;
-    max-height: 3000px !important;
+    max-height: 300px !important;
    }
    .card-img {
     max-width: 300px !important;
