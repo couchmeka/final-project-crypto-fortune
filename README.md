@@ -6,6 +6,8 @@ This Web Application give you an inspirational quote in the form of a fortune co
 
 ## Info
 This application uses Coin Gecko API https://www.coingecko.com/en/api/documentation or https://mixedanalytics.com/knowledge-base/import-coingecko-data-to-google-sheets/
+
+
 And Quotes Free API https://forum.freecodecamp.org/t/free-api-inspirational-quotes-json-with-code-examples/311373
 
 ## Usage 
