@@ -247,7 +247,7 @@ cookieButton.addEventListener('click', () => {
 
 
 
-//Sort Table by Name
+//Sort Table (found online @ https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript)
 
 
 
