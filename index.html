@@ -64,9 +64,9 @@
   
     <!--  Table Card (hover does not work using table inside of card)-->
           <div class ="center card scroll"style="width: 50rem;">
-            <table class="table table-hover table-dark table-striped mb-0 sorttable">
+            <table id = "myTable" class="table table-hover table-dark table-striped mb-0 ">
                 <thead class="header">
-                    <th scope="col">Crypto Name</th>
+                    <th onclick="sortTable()" scope="col">Name</th>
                     <th scope="col">Current Price</th>
                     <th scope="col">Brand Logo</th>
                     <th scope="col">Symbol</th> 
@@ -86,7 +86,7 @@
   <!-- scripts -->
 
   <!-- Sort Script -->
-        <script src="sorttable.js"></script>
+ 
   <!-- Font Awesome  -->
         <script src="https://kit.fontawesome.com/267ca0a163.js" crossorigin="anonymous"></script>
   <!-- Bootstrap -->

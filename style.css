@@ -391,4 +391,9 @@ table tr:hover td {
   
   
   
+  /* sortable */
   
+  th:hover {
+
+    cursor: pointer;
+  }
