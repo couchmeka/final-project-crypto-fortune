@@ -1,3 +1,4 @@
+
 //query selectors 
 
 let fortuneCookie = document.querySelector('#getFortune');
@@ -60,15 +61,15 @@ let quoteRequest = async () => {
     }
     
     let textToSpeak = `${fortune.innerText}`;
-    let speakData = new SpeechSynthesisUtterance();
-    speakData.volume = 1; // 0 to 1
-    speakData.rate = .8; // 0.1 to 10
-    speakData.pitch = 1.2; // 0 to 2
-    speakData.text = textToSpeak;
-    speakData.lang = 'en';
-    speakData.voice = getVoices()[0];
+    let speechData = new SpeechSynthesisUtterance();
+    speechData.volume = 1; // 0 to 1
+    speechData.rate = .8; // 0.1 to 10
+    speechData.pitch = 1.2; // 0 to 2
+    speechData.text = textToSpeak;
+    speechData.lang = 'en';
+    speechData.voice = getVoices()[0];
     
-    speechSynthesis.speak(speakData);
+    speechSynthesis.speak(speechData);
 
         }
 
@@ -88,6 +89,9 @@ let tickerRequestFortune = async () => {
     cryptoImg.style.height = '50px';
 
     // inner text for crypto fortune
+  
+
+
     cryptoPrice.innerText =`Current Price: ${cryptoType.current_price}`;
     crypto.innerText =`Lucky Crypto: ${cryptoType.name} `;
 
@@ -165,16 +169,23 @@ sound.play();
           
       
       //adding data to table rows
+            name.innerHTML = item.name;
+            
+            currentPrice.innerHTML = `$ ${item.current_price}`;
+
             high24.innerHTML = item.high_24h;
             high24.style.color='lightgreen';
 
             low24.innerHTML = item.low_24h;
             low24.style.color ='red';
 
-            volume.innerHTML =item.total_volume;
+            volume.innerHTML = item.total_volume;
+
+
+
             symbol.innerHTML = item.symbol.toUpperCase();
-            name.innerHTML = item.name;
-            currentPrice.innerHTML = `$ ${item.current_price}`;
+            
+            
 
       //row click to copy crypto name for easy search reference https://stackoverflow.com/questions/69438702/why-does-navigator-clipboard-writetext-not-copy-text-to-clipboard-if-it-is-pro
      
@@ -183,7 +194,8 @@ sound.play();
         navigator.clipboard
           .writeText(item.name)
           .then(() => {
-            alert(`successfully copied ${item.name}`);
+            alert(`Successfully copied ${item.name}!`);
+            
           })
           .catch(() => {
             alert("something went wrong");
