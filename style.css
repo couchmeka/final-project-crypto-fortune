@@ -393,7 +393,7 @@ table tr:hover td {
   
   /* sortable */
   
-  th:hover {
+  #cursor:hover {
 
     cursor: pointer;
   }
