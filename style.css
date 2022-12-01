@@ -109,6 +109,8 @@ table tr:hover td {
   p{
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5%;
+  
   
   }
   
@@ -254,14 +256,14 @@ table tr:hover td {
    }
 
    p {
-    max-width: 200px !important;
+    max-width: 150px !important;
     max-height: 100px !important;
     display: flex;
     align-content: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 25%;
     font-size: xx-small;
   
 
@@ -397,8 +399,6 @@ table tr:hover td {
 
     cursor: pointer;
   }
-
-
 
 
   table, td {

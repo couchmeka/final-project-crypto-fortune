@@ -115,7 +115,7 @@ fortune.style.textAlign='center';
 fortune.style.display = 'flex';
 fortune.style.justifyContent = 'center';
 fortune.style.alignItems = 'center';
-fortune.style.maxWidth = '250px';
+fortune.style.maxWidth = '300px';
 fortune.style.fontWeight ='bold';
 cardDiv.appendChild(fortune);
 
